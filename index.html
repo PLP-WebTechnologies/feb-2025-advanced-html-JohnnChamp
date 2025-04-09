@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Webpage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+
+        h1, h2 {
+            text-align: center;
+        }
+
+        /* Table styling */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+
+        /* Form styling */
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        input[type="radio"], input[type="checkbox"] {
+            width: auto;
+            margin-right: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .form-section {
+            margin-bottom: 20px;
+        }
+
+        .checkbox-group, .radio-group {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Welcome to My Webpage</h1>
+    </header>
+
+    <!-- Ordered List with Roman Numerals -->
+    <section>
+        <h2>Ordered List (Roman Numerals)</h2>
+        <ol type="I">
+            <li>Introduction</li>
+            <li>About Us</li>
+            <li>Services</li>
+            <li>Contact</li>
+        </ol>
+    </section>
+
+    <!-- External Image from Pexels -->
+    <section>
+        <h2>Image from Pexels</h2>
+        <img src="https://www.pexels.com/photo/cookie-with-strawberries-20228226.jpeg" alt="Scenic Landscape">
+    </section>
+
+    <!-- Table of Contacts -->
+    <section>
+        <h2>Contact List</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Address</th>
+                    <th>Mobile</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>John Ogabu</td>
+                    <td>123 Main St, AbuleEgba</td>
+                    <td>(234) 81 4614 2514</td>
+                    <td>johnogabuisioma@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>Jane Ola</td>
+                    <td>456 Elm St, Ikeja</td>
+                    <td>(234) 81 7342 9890</td>
+                    <td>janeola@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>Michael Chibuzor</td>
+                    <td>789 Oak St, Surulere</td>
+                    <td>(555) 123-4567</td>
+                    <td>michaelchibuzor@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>Emily Hassan</td>
+                    <td>321 Pine St, Lekki</td>
+                    <td>(234) 70 9888 1234</td>
+                    <td>emilyhassan@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>David Samuel</td>
+                    <td>654 Maple St, Yaba</td>
+                    <td>(234) 90 6117 0890</td>
+                    <td>davidsamuel@gmail.com</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+     <!-- Registration Form -->
+     <section>
+      <h2>Registration Form</h2>
+      <form action="submit-form.php" method="POST">
+          <!-- Name Field -->
+          <div class="form-section">
+              <label for="name">Full Name:</label>
+              <input type="text" id="name" name="name" required placeholder="Enter your full name" minlength="3" maxlength="50">
+          </div>
+
+          <!-- Email Field -->
+          <div class="form-section">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required placeholder="you@example.com">
+          </div>
+
+          <!-- Password Field -->
+          <div class="form-section">
+              <label for="password">Password:</label>
+              <input type="password" id="password" name="password" required placeholder="Create a password" minlength="8">
+          </div>
+
+          <!-- Date of Birth Field -->
+          <div class="form-section">
+              <label for="birthdate">Date of Birth:</label>
+              <input type="date" id="birthdate" name="birthdate" required>
+          </div>
+
+          <!-- Dropdown (Country) -->
+          <div class="form-section">
+              <label for="country">Country:</label>
+              <select id="country" name="country" required>
+                  <option value="">Select your country</option>
+                  <option value="usa">United States</option>
+                  <option value="nigeria">Nigeria</option>
+                  <option value="canada">Canada</option>
+                  <option value="uk">United Kingdom</option>
+                  <option value="australia">Australia</option>
+              </select>
+          </div>
+
+          <!-- Radio Buttons (Gender) -->
+          <div class="form-section radio-group">
+              <label>Gender:</label>
+              <input type="radio" id="male" name="gender" value="male" required>
+              <label for="male">Male</label>
+              <input type="radio" id="female" name="gender" value="female" required>
+              <label for="female">Female</label>
+              <input type="radio" id="other" name="gender" value="other" required>
+              <label for="other">Other</label>
+          </div>
+
+          <!-- Checkbox Group (Interests) -->
+          <div class="form-section checkbox-group">
+              <label>Interests:</label>
+              <input type="checkbox" id="sports" name="interests" value="sports">
+              <label for="sports">Sports</label>
+
+              <input type="checkbox" id="music" name="interests" value="music">
+              <label for="music">Music</label>
+
+              <input type="checkbox" id="travel" name="interests" value="travel">
+              <label for="travel">Travel</label>
+          </div>
+
+          <!-- Submit Button -->
+          <div class="form-section">
+              <button type="submit">Register</button>
+          </div>
+      </form>
+  </section>
+
+</body>
+</html>
